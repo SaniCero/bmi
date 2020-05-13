@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <style>
+        body,html {
+            color: Green;
+            display:block;
+            width:100%;
+            margin:0;
+            padding:0;
+        }
+        form {
+        backgroun-color: CadetBlue;
+        display:inline-block;
+        box-sizing:border-box;
+        box-shadow:0  8px  6px  -6px black;
+        margin:0;
+        padding:10px;
+        width:100%;
+        max-width:400px;
+
+        }
+        input {
+            width: 100%;
+            text-align:center;
+        }
+        .submit {
+            color: white;
+            background-color:LightBlue;
+            margin:0;
+            padding: 5px;
+            border: 0;
+            font-weight: bold;
+            width:100%;
+        }
+        .submit:hover {
+            color: LightBlue;
+            background-color: white;
+            font-size: 0.7em;
+            font-weight: bold;
+
+        }
+        #result {
+            border : 1px solid black;
+            padding: 2px;
+            color: Cornsilk;
+            width: 100%;
+            text-align: center;
+        }
+        h4{
+            color: black;
+            font-family: Impact, Charcoal, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <h4>BMI CALCULATOR</h4>
+        <input id="weight" type="text" placeholder="Your weight in kilograms" />
+        <br/>
+        <br/>
+        <input id="height" type="text" placeholder="Your height in meters" />
+        <br/>
+        <br/>
+        <input class = "submit" type="button" value="Submit" onClick="bmi()" />
+        <p id="result">Here willl be your result</p>
+    </form>
+    <script>
+        function bmi () {
+            var height =Number(document.getElementById("height").value);
+            var weight =Number(document.getElementById("weight").value);
+            var result = weight / (height * height);
+            document.getElementById("result").innerHTML="Your bmi score is : " + result;
+        }
+    </script>
+</body>
+</html>
