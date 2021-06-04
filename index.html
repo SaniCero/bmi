@@ -2,80 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMI</title>
-    <style>
-        body,html {
-            color: Green;
-            display:block;
-            width:100%;
-            margin:0;
-            padding:0;
-        }
-        form {
-        backgroun-color: CadetBlue;
-        display:inline-block;
-        box-sizing:border-box;
-        box-shadow:0  8px  6px  -6px black;
-        margin:0;
-        padding:10px;
-        width:100%;
-        max-width:400px;
-
-        }
-        input {
-            width: 100%;
-            text-align:center;
-        }
-        .submit {
-            color: black;
-            background-color:LightBlue;
-            margin:0;
-            padding: 5px;
-            border: 0;
-            font-weight: bold;
-            width:100%;
-        }
-        .submit:hover {
-            color: black;
-            background-color: white;
-            font-size: 0.7em;
-            font-weight: bold;
-
-        }
-        #result {
-            border : 1px solid black;
-            padding: 2px;
-            color: black;
-            width: 100%;
-            text-align: center;
-        }
-        h4{
-            color: black;
-            font-family: Impact, Charcoal, sans-serif;
-        }
-
-    </style>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <form>
-        <h4>BMI CALCULATOR</h4>
-        <input id="weight" type="text" placeholder="Your weight in kilograms" />
-        <br/>
-        <br/>
-        <input id="height" type="text" placeholder="Your height in meters" />
-        <br/>
-        <br/>
-        <input class = "submit" type="button" value="Submit" onClick="bmi()" />
-        <p id="result">Here willl be your result</p>
+    <div class="contact-title">
+        <h1>Say hello!</h1>
+        <h2>We are always ready to serve you</h2>
+    </div>
+
+    <div class="contact-form">
+        <form id="contact-form method="post action="contact-form-handler.php">
+        <input name="name" type="text" class="form-control" placeholder="Your Name" required>
+        <br>
+        <input name="email" type="email" class="form-control" placeholder="Your Email" required>
+        <br> 
+        
+            
+        
+        <textarea name="message" class="form-control" placeholder="Message" row="4" required></textarea>
+        <br>
+
+        <input type="Submit" class="form-control submit" value="SEND MESSAGE">
     </form>
-    <script>
-        function bmi () {
-            var height =Number(document.getElementById("height").value);
-            var weight =Number(document.getElementById("weight").value);
-            var result = weight / (height * height);
-            document.getElementById("result").innerHTML="Your bmi score is : " + result;
-        }
-    </script>
+    </div>
 </body>
 </html>
